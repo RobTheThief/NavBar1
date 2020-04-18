@@ -1,0 +1,205 @@
+
+@import url(https://fonts.googleapis.com/css?family=Raleway&display=swap);
+
+img {
+  border-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  background-color: black;
+  z-index : 1;
+  border-bottom: 4px solid #00CED1;
+  border-radius: 0 0 0.25rem 0.25rem;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  width:100%;
+  padding: 24px 0px 24px 0px;
+}
+
+main {
+  display: block;
+  top:50%;
+  padding-top: 3%;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  background-color: transparent;
+  font-family: 'Raleway', sans-serif;
+  outline: 0;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+}
+
+.logo {
+  max-height: 50px;
+  max-width: 120px;
+  position: relative;
+  right: 0px;
+}
+
+.unselectable {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.my-sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.buttonCustom {
+  color: white;
+  font-weight: 600;
+  padding: 0 16px 0 16px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: opacity;
+  transition: .3s ease;
+}
+
+.overlayContainer {
+  position: relative;
+}
+
+.logoContainer {
+  position: absolute;
+  right: 0px;
+}
+
+.overlayContainer:hover .overlay {
+  opacity: 0.5;
+  transform: opacity;
+}
+
+.logoContainer:hover .overlay {
+  opacity: 0.5;
+  transform: opacity;
+}
+
+.logo:hover .overlay {
+  opacity: 0.5;
+  transform: opacity;
+}
+
+.buttonCustom:focus {
+    outline: 0;
+}
+
+.menuButton {
+  border-width: 1px;
+  border-color:black;
+  border-radius: 50px 20px;
+  background: url("img/hoverbuttonBlackBluTop.jpg") no-repeat;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  opacity: 1;
+  background-position: 0% 60%;
+  transition:background-position 0.3s ease;
+  display: none;
+  outline: 0;
+  text-align: left;
+  font-weight: 600;
+  padding: 0px 16px 0px 16px;
+}
+
+.menuButton.menuClicked {
+  background-position: 0% -75%;
+}
+
+.menuLabel {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-weight: 600;
+  padding: 4px 0 4px 0;
+}
+
+.menuLabel:focus {
+    outline: 0;
+}
+
+.btnCover {
+  position: relative;
+  opacity: 0;
+  outline: 0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-radius: 50px 20px;
+  display: none;
+  text-align: left;
+  border: 4px solid #00CED1;
+  left: 15px;
+}
+
+.dropdown-container {
+  top: 48px;
+  left: -20px;
+  position: absolute;
+  background-color: black;
+  width: 420px;
+  padding: 0px 16px;
+  height: 0px;
+  transition: height 0.3s ease;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+}
+
+.dropdown-container.visible {
+  height: 125px;
+  border-bottom: 4px solid #00CED1;
+  border-radius: 0 0 0.25rem 0.25rem;
+  z-index: 1;
+
+}
+
+@media only screen and (max-width:420px) {
+  /* For mobile phones: */
+  .buttonCustom {
+    font-size: 0.878rem;
+    opacity: 0;
+    display:none;
+  }
+
+  .menuButton {
+    display: inline-block;
+  }
+
+  .dropdown {
+    display: inline-block;
+  }
+}
