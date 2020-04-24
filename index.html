@@ -1,43 +1,135 @@
 
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<head>
-  <link rel="stylesheet" href="style.css"> <!--Custom css outside framework. Has priority-->
-</head>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-<body>
+  <body>
+    <div class = "wrap">
+      <nav class="my-sticky">
 
-<nav class="my-sticky">
+    <!-- Hamburger menu only active below width of 420px. Main nav bar links disappear at this point.
+         Nav bar retracts when scrolling using JavaScript-->
+          <div class="dropdown-menu">
+            <div id="menuBtn" onclick="menuBtn()" class = "menuButton unselectable">Menu</div>
+            <div id="dropdownContainer" class="dropdown-container">
+              <a id="menuBtnHome" onclick="home()" href="#" class="dropdown-menu-items overlayContainer clicked-button-color">Home<div class="overlay"></div></a>
+              <a id="menuBtnAbout" href="#aboutHead" class="dropdown-menu-items overlayContainer">About<div class="overlay"></div></a>
+              <a id="menuBtnProjects" href="#projectsHead" class="dropdown-menu-items overlayContainer">Projects<div class="overlay"></div></a>
+              <a id="menuBtnContact" href="#contactHead" class="dropdown-menu-items overlayContainer">Contact<div class="overlay"></div></a>
+            </div>
+          </div>
 
-    <div class="dropdown">
-      <a id="menuBtn" onclick="menuBtn()" class = "menuButton unselectable" unselectable="on">Menu<div class="btnCover"></div></a>
-      <div id="dropdownContainer" class="dropdown-container">
-        <a style = "color:#00CED1;" href="index.html"class="menuLabel overlayContainer">Home<div class="overlay"></div></a>
-        <a href="#myHeader" class="menuLabel overlayContainer">About<div class="overlay"></div></a>
-        <a href="projects.html" class="menuLabel overlayContainer">Projects<div class="overlay"></div></a>
-        <a href="contact.php" class="menuLabel overlayContainer">Contact<div class="overlay"></div></a>
-      </div>
+    <!-- Main nav bar links-->
+          <a id="home" onclick="home()" href="#" class="buttonCustom overlayContainer clicked-button-color">Home<div class="overlay"></div></a>
+          <a id="about" href="#aboutHead" class="buttonCustom overlayContainer">About<div class="overlay"></div></a>
+          <a id="projects"  href="#projectsHead" class="buttonCustom overlayContainer">Projects<div class="overlay"></div></a>
+          <a id="contact"  href="#contactHead" class="buttonCustom overlayContainer">Contact<div class="overlay"></div></a>
+          <!-- LOGO WITH OVERLAY AND LINK TO WHATEVER YOU WANT THEN ADD YOU OWN LOGO, OR USE MINE. WHATEVER! IF HAVING TROUBLE WITH SIZE SET IMAGE TO 45x45px-->
+          <a href="" class = "logoContainer"><img src = "http://robgannon.com/img/rgLogo.png" class = "logo"><div class="overlay"></div></a>
+        </nav>
+
+        <main>
+            <h1 id="homeHead"><br></br>HOME</h1>
+            <p id="homePara">This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text.This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.<br></br>
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text.</p>
+            <h1 id="aboutHead" ><br></br>ABOUT</h1>
+            <p id="aboutPara">This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text.This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.<br></br>
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text.</p>
+            <h1 id="projectsHead"><br></br>PROJECTS</h1>
+            <p id="projectsPara">This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text.This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.<br></br>
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text.</p>
+            <h1 id="contactHead"><br></br>CONTACT</h1>
+            <p id="contactPara">This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text.This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.<br></br>
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text. This the bit where we have some text.
+              This the bit where we have some text.</p>
+
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+
+        </main>
+
+    <!-- Footer with social media links -->
+        <footer>
+          <p class = "copyright">&copy; 2020 Rob Gannon.</p>
+          <div class = "foot-links-container">
+            <div class="foot-link overlayContainer tooltip">
+                <img src="http://robgannon.com/img/lindedinCodepen.png" alt="Linkedin" height="18" width="23" align = "right">
+                <a href="" target="_blank"><div class="overlay"></div></a> <!-- Add your link here -->
+                <span class="tooltiptext">Linkedin</span>
+            </div>
+            <div class="foot-link overlayContainer tooltip">
+                <img src="http://robgannon.com/img//githubCodepen.png" alt="github" height="18" width="23" align = "right">
+                <a href="" target="_blank"><div class="overlay"></div></a> <!-- Add your link here -->
+                <span class="tooltiptext">GitHub</span>
+            </div>
+            <div class="foot-link overlayContainer tooltip">
+                <img src="http://robgannon.com/img//twitterCodepen.png" alt="Twitter" height="18" width="23" align = "right">
+                <a href="" target="_blank" class = ""><div class="overlay"></div></a> <!-- Add your link here -->
+                <span class="tooltiptext">Twitter</span>
+            </div>
+          </div>
+        </footer>
     </div>
+  </body>
 
-    <a style = "color:#00CED1;" href="index.html" class="buttonCustom overlayContainer">Home<div class="overlay"></div></a>
-    <a href="#myHeader" class="buttonCustom overlayContainer">About<div class="overlay"></div></a>
-    <a href="projects.html" class="buttonCustom overlayContainer">Projects<div class="overlay"></div></a>
-    <a href="contact.php" class="buttonCustom overlayContainer">Contact<div class="overlay"></div></a>
-    <a href="index.html" class = "logoContainer"><img src = "img/rgLogo.png" class = "logo"><div class="overlay"></div></a>
+<script src="javascript.js"></script>
 
-  </nav>
-
-  <main>
-    
-      <p>This the bit where we have some text. This the bit where we have some text. This the bit where we have some text. This the bit where we have some text. This the bit where we have some text. This the bit where we have some text. This the bit where we have some text.</p>
-      <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-
-  </main>
-
-<footer>
-</footer>
-
-  <script src="javascript.js"></script>
-
-</body>
 </html>
